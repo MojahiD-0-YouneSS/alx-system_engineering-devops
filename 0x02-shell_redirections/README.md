@@ -1,0 +1,1 @@
+this script prints "Hello World" into the Standard output
