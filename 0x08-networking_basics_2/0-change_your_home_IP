@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Configures an Ubuntu server with the following requirements:
+# 	     - localhost resolves to 127.0.0.2
+#	     - facebook.com resolves to 8.8.8.8
+if grep -q docker /proc/1/cgroup; then
+    # Update /etc/hosts file
+    echo "127.0.0.2 localhost" | sudo tee -a /etc/hosts
+    echo "8.8.8.8 facebook.com" | sudo tee -a /etc/hosts
+else
+    echo "This script should be run inside a Docker container."
+    exit 1
+fi
