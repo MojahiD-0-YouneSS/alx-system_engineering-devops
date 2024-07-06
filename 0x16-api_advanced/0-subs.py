@@ -12,7 +12,7 @@ def number_of_subscribers(subreddit):
         return 0
 
     url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
-    headers = {'User-Agent': 'Mozilla/5.0 (compatible; Reddit API Client; +http://www.example.com)'}
+    headers={'User-Agent': '0x16-api_advanced:project:v1.0.0 (by /u/firdaus_cartoon_jr)'}
     
     try:
         response = requests.get(url, headers=headers, timeout=10)
