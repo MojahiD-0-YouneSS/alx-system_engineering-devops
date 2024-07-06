@@ -54,17 +54,17 @@ Documentation Update: Highlight the importance of correct file path configuratio
 
 To make this postmortem a bit more engaging, here’s a simple and fun diagram to visualize the issue and resolution process.
 
-       Issue Detected                  Investigation \n
-          ⬇️                                ⬇️\n
-   User Complaints            Misleading Paths Explored \n
-          ⬇️                                ⬇️\n
-      Escalation           🐰 Rabbit Holes of File Permissions\n
-          ⬇️                                ⬇️\n
-    Eureka Moment                Incorrect File Path Found\n
-          ⬇️                                ⬇️\n
-     Fix Applied                File Path Corrected\n
-          ⬇️                                ⬇️\n
-   Resolution Confirmed           System Back to Normal\n
+       Issue Detected                  Investigation
+          ⬇️                                ⬇️
+       User Complaints            Misleading Paths Explored
+          ⬇️                                ⬇️
+       Escalation           🐰 Rabbit Holes of File Permissions
+          ⬇️                                ⬇️
+       Eureka Moment                Incorrect File Path Found
+          ⬇️                                ⬇️
+       Fix Applied                File Path Corrected
+          ⬇️                                ⬇️
+       Resolution Confirmed           System Back to Normal
 
 ## Conclusion
 
