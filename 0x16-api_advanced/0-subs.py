@@ -19,11 +19,11 @@ def number_of_subscribers(subreddit):
         response.raise_for_status()
         data = response.json()
         subscribers = data.get("data", {}).get("subscribers", 0)
+        return subscribers
+
     except requests.RequestException as e:
         print(f"Request failed: {e}")
         return 0
     except ValueError as e:
         print(f"JSON parsing failed: {e}")
         return 0
-
-    return subscribers
