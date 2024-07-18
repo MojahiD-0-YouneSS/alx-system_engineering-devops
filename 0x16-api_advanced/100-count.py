@@ -32,7 +32,7 @@ def count_words(subreddit, word_list, hot_list=None, viewed_count=0, after=''):
         return
 
     for post in data.get('children', []):
-        hot_list.append(post.get('data', {}).get('title', '')) 
+        hot_list.append(post.get('data', {}).get('title', ''))
     after = data.get('after', '')
     dist = data.get('dist', 0)
     if after:
