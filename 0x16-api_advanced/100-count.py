@@ -16,10 +16,10 @@ def count_words(subreddit, word_list, hot_list=None, viewed_count=0, after=''):
 
     base_url = 'https://www.reddit.com/'
     endpoint = 'r/{}/hot.json'.format(subreddit)
-    query_string = '?show="all"&limit=100&after={}&count={}'.format(after, viewed_count)
+    query_string = '?show="all"&limit=100\
+            &after={}&count={}'.format(after, viewed_count)
     url = base_url + endpoint + query_string
     headers = {'User-Agent': 'Python/1.0(Holberton School 0x16 task 3)'}
-    
     try:
         response = requests.get(url, headers=headers, allow_redirects=False)
         response.raise_for_status()
@@ -32,8 +32,7 @@ def count_words(subreddit, word_list, hot_list=None, viewed_count=0, after=''):
         return
 
     for post in data.get('children', []):
-        hot_list.append(post.get('data', {}).get('title', ''))
-    
+        hot_list.append(post.get('data', {}).get('title', '')) 
     after = data.get('after', '')
     dist = data.get('dist', 0)
     if after:
